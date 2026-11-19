@@ -28,9 +28,12 @@ continues where it stopped.
 """
 
 import hashlib
+import math
 import re
 import sys
+import unicodedata
 import urllib.request
+from collections import Counter
 from pathlib import Path
 
 import chromadb
@@ -47,7 +50,8 @@ INDEX_DIR = ROOT / "index"  # committed, vectors included
 
 EMBEDDING_MODEL = "gemini-embedding-2"
 DESIGNS = ["structure", "fixed"]  # embedded in this order (the daily quota may run out)
-CHOSEN_DESIGN = "structure"  # the one server.py uses; set it from the hit rates in evaluate.py
+CHOSEN_DESIGN = "fixed"  
+SEARCH_METHOD = "dense"  # "dense" or "hybrid": also chosen from the hit rates in evaluate.py
 
 DOCUMENTS = [
     {
@@ -70,6 +74,17 @@ DOCUMENTS = [
         "title": "Reglamento (UE) 2023/1804 (AFIR), infraestructura para los combustibles alternativos",
         # The EUR-Lex website blocks scripts; the EU Publications Office serves the same PDF.
         "url": "https://publications.europa.eu/resource/celex/32023R1804",
+    },
+]
+
+# Not indexed by `main.py index`: added later through the add_document tool, to show an
+# unanswerable question (q31) becoming answerable. `uv run python index.py --download-extra`
+# only downloads it into corpus/.
+EXTRA_DOCUMENTS = [
+    {
+        "id": "lph",
+        "title": "Ley 49/1960, sobre propiedad horizontal (texto consolidado)",
+        "url": "https://www.boe.es/buscar/pdf/1960/BOE-A-1960-10906-consolidado.pdf",
     },
 ]
 
@@ -117,7 +132,8 @@ FURNITURE = [
     r"Núm\. \d+ .* Pág\. \d+",  # BOE daily edition header
     r"cve: BOE-\S+",
     r"Verificable en https://www\.boe\.es",
-    r"(L \d+/\d+ )?ES Diario Oficial de la Unión Europea( \d+\.\d+\.\d{4})?( L \d+/\d+)?",  # EU Official Journal
+    r"(L \d+/\d+ )?ES Diario Oficial de la Unión Europea( L \d+/\d+)?( \d+\.\d+\.\d{4})?( L \d+/\d+)?",  # EU Official Journal, odd and even pages
+    r".*BOLETÍN OFICIAL DEL ESTADO D\. L\.: .*",  # BOE colophon on the last page
 ]
 FURNITURE_RE = re.compile(r"^(?:" + "|".join(FURNITURE) + r")$")
 FOOTNOTE_START = re.compile(r"^\(\d+\) ")
@@ -197,8 +213,8 @@ ANNEX = re.compile(r"^ANEXO(?: ([IVX]+))?$")
 RECITAL = re.compile(r"^\((\d+)\) ")
 ITC_START = "INSTRUCCIÓN TÉCNICA COMPLEMENTARIA (ITC) BT-52"
 ITC_TOP = re.compile(r"^([1-9])\. ([A-ZÁÉÍÓÚ][a-záéíóúñ ,]+)$")  # "2. Términos y definiciones"
-ITC_SUB = re.compile(r"^(\d\.\d) ([A-ZÁÉÍÓÚ].*)$")  # "3.2 Instalación en ... . Text"
-HE_SECTION = re.compile(r"^«?Sección (HE \d)\.")  # the section itself, not the index entry
+ITC_SUB = re.compile(r"^(\d\.\d) ([A-ZÁÉÍÓÚ].*)$")  
+HE_SECTION = re.compile(r"^«?Sección (HE \d)\.")  
 
 
 def short(title, limit=90):
@@ -211,8 +227,8 @@ def split_sections(lines):
     """Group lines into the document's own units, each with the pages it spans."""
     sections = []
     label, in_itc, in_recitals, article = "Preámbulo", False, False, None
-    itc_top = 0  # last top-level ITC apartado seen
-    pending_title = None  # AFIR articles and annexes have their title on the next line
+    itc_top = 0  
+    pending_title = None  
 
     def start(new_label):
         sections.append({"section": new_label, "words": [], "pages": []})
@@ -238,7 +254,7 @@ def split_sections(lines):
             pending_title = f"Anexo {m.group(1) or ''}".strip()
             start(pending_title)
         elif in_itc and (m := ITC_TOP.match(line)) and int(m.group(1)) == itc_top + 1:
-            itc_top += 1  # apartados come in order: "3. Esta instrucción no..." inside apartado 1 is a list item
+            itc_top += 1  
             start(f"ITC-BT-52 apartado {m.group(1)}. {short(m.group(2))}")
         elif in_itc and (m := ITC_SUB.match(line)) and m.group(1).startswith(f"{itc_top}."):
             start(f"ITC-BT-52 apartado {m.group(1)}. {short(m.group(2))}")
@@ -369,7 +385,7 @@ def embed_texts(texts):
     """Embed already-prefixed texts in one call. Returns one list of floats per text."""
     result = client().models.embed_content(
         model=EMBEDDING_MODEL,
-        contents=[types.Content(parts=[types.Part(text=t)]) for t in texts],  # one Content per text
+        contents=[types.Content(parts=[types.Part(text=t)]) for t in texts],  
     )
     return [e.values for e in result.embeddings]
 
@@ -388,7 +404,7 @@ def get_collection(design=CHOSEN_DESIGN):
     return db.get_or_create_collection(
         name=f"corpus_{design}",
         configuration={"hnsw": {"space": "cosine"}},
-        embedding_function=None,  # we always pass our own Gemini vectors
+        embedding_function=None,  
     )
 
 
@@ -456,16 +472,16 @@ def index_file(path, design=CHOSEN_DESIGN, source=None, title=None, url=""):
     new_ids = {chunk_id(c, n, design) for n, c in enumerate(chunks)}
 
     if existing["ids"] and old_hashes != {digest}:
-        status = "replaced"  # a new version of a document we already had
+        status = "replaced"  
         collection.delete(ids=existing["ids"])
     else:
         status = "already indexed" if existing["ids"] else "added"
-        stale = [i for i in existing["ids"] if i not in new_ids]  # chunking changed since last run
+        stale = [i for i in existing["ids"] if i not in new_ids]  
         if stale:
             collection.delete(ids=stale)
     embedded = embed_and_store(chunks, design, {"file_hash": digest})
     if status == "already indexed" and embedded:
-        status = "completed"  # an earlier run had stopped half-way
+        status = "completed"  
     return {
         "source": source,
         "title": chunks[0]["title"],
@@ -478,21 +494,118 @@ def index_file(path, design=CHOSEN_DESIGN, source=None, title=None, url=""):
 # ---------------------------------------------------------------- 6. search (used by server.py and evaluate.py)
 
 
-def retrieve(question, k=5, design=CHOSEN_DESIGN, query_vector=None, where=None):
-    """The k chunks closest to the question, best first, each with a score and its location."""
+def dense_search(question, n, design, query_vector=None, where=None):
+    """Embedding search: the n chunks with the highest cosine similarity, as (id, hit) pairs."""
     collection = get_collection(design)
+    n = min(n, collection.count())
+    if n == 0:
+        return []
     result = collection.query(
         query_embeddings=[query_vector if query_vector is not None else embed_query(question)],
-        n_results=k,
+        n_results=n,
         where=where,
         include=["documents", "metadatas", "distances"],
     )
-    hits = []
-    for text, meta, distance in zip(result["documents"][0], result["metadatas"][0], result["distances"][0]):
-        hit = {**meta, "text": text, "score": round(1 - distance, 4)}
+    return [
+        (i, {**meta, "text": text, "score": round(1 - distance, 4)})
+        for i, text, meta, distance in zip(
+            result["ids"][0], result["documents"][0], result["metadatas"][0], result["distances"][0]
+        )
+    ]
+
+
+# Keyword search (BM25), for exact terms embeddings are weak at: "C13", "IK10", "30 mA", "3.000 kW".
+STOPWORDS = set(
+    "a al como con de del el en es la las lo los o para por que se su sus un una y e u ni the of to "
+    "and or in on for is are what which how qué cuál cuáles cómo cuándo cuánto cuántos dónde debe deben "
+    "puede pueden hay ser este esta estos estas".split()
+)
+
+
+def tokens(text):
+    """Lower-case words without accents, keeping numbers like 3,7 or 2.300 whole."""
+    text = unicodedata.normalize("NFKD", text.lower())
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    return [t for t in re.findall(r"\d+(?:[.,]\d+)*|[a-z0-9]+", text) if t not in STOPWORDS]
+
+
+_keyword_index = {}
+
+
+def keyword_index(design):
+    """BM25 statistics over every chunk of a collection, rebuilt when the collection grows."""
+    collection = get_collection(design)
+    count = collection.count()
+    if design in _keyword_index and _keyword_index[design]["count"] == count:
+        return _keyword_index[design]
+    data = collection.get(include=["documents", "metadatas"])
+    docs = [Counter(tokens(t)) for t in data["documents"]]
+    df = Counter(term for doc in docs for term in doc)
+    _keyword_index[design] = {
+        "count": count,
+        "ids": data["ids"],
+        "texts": data["documents"],
+        "metas": data["metadatas"],
+        "docs": docs,
+        "lengths": [sum(d.values()) for d in docs],
+        "idf": {t: math.log(1 + (len(docs) - n + 0.5) / (n + 0.5)) for t, n in df.items()},
+    }
+    return _keyword_index[design]
+
+
+def matches(meta, where):
+    """The two metadata filters this project uses: {"source": x} and {"source": {"$in": [...]}}."""
+    if not where:
+        return True
+    wanted = where["source"]
+    return meta["source"] in wanted["$in"] if isinstance(wanted, dict) else meta["source"] == wanted
+
+
+def keyword_search(question, n, design, where=None, k1=1.5, b=0.75):
+    ix = keyword_index(design)
+    if not ix["docs"]:
+        return []
+    terms = tokens(question)
+    avg = sum(ix["lengths"]) / len(ix["lengths"])
+    scored = []
+    for i, (doc, length, meta) in enumerate(zip(ix["docs"], ix["lengths"], ix["metas"])):
+        if not matches(meta, where):
+            continue
+        s = sum(
+            ix["idf"].get(t, 0) * doc[t] * (k1 + 1) / (doc[t] + k1 * (1 - b + b * length / avg))
+            for t in terms if t in doc
+        )
+        if s > 0:
+            scored.append((s, i))
+    scored.sort(reverse=True)
+    return [(ix["ids"][i], {**ix["metas"][i], "text": ix["texts"][i], "score": round(s, 3)}) for s, i in scored[:n]]
+
+
+def retrieve(question, k=5, design=CHOSEN_DESIGN, query_vector=None, where=None, method=None):
+    """The k best chunks for the question, best first, each with a score and its location.
+
+    method "dense": embedding similarity only.
+    method "hybrid": the 30 best by embeddings and the 30 best by keywords, merged with
+    reciprocal rank fusion (each list adds 1 / (60 + rank)); costs no extra embedding.
+    """
+    method = method or SEARCH_METHOD
+    if method == "dense":
+        ranked = [hit for _, hit in dense_search(question, k, design, query_vector, where)]
+    elif method == "hybrid":
+        fused, hits = Counter(), {}
+        for results in (
+            dense_search(question, 30, design, query_vector, where),
+            keyword_search(question, 30, design, where),
+        ):
+            for rank, (chunk, hit) in enumerate(results, start=1):
+                fused[chunk] += 1 / (60 + rank)
+                hits.setdefault(chunk, hit)
+        ranked = [{**hits[c], "score": round(s, 4)} for c, s in fused.most_common(k)]
+    else:
+        raise ValueError(f"Unknown search method {method!r}; use 'dense' or 'hybrid'.")
+    for hit in ranked:
         hit["location"] = location(hit)
-        hits.append(hit)
-    return hits
+    return ranked
 
 
 # ---------------------------------------------------------------- main
@@ -517,4 +630,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--download-extra" in sys.argv:
+        for doc in EXTRA_DOCUMENTS:
+            print(f"{download(doc).relative_to(ROOT)} ready; add it with the add_document tool.")
+    else:
+        main()

@@ -1,0 +1,1794 @@
+{
+ "best": "fixed+dense",
+ "in_use": "fixed+dense",
+ "designs": {
+  "structure+dense": {
+   "hit_rate": {
+    "1": 0.933,
+    "3": 0.967,
+    "5": 1.0
+   },
+   "multi_all_passages_at_5": 0.667,
+   "avg_words_added": {
+    "1": 279,
+    "3": 811,
+    "5": 1330
+   },
+   "per_question": [
+    {
+     "id": "q01",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8358,
+     "words": {
+      "1": 300,
+      "3": 748,
+      "5": 1348
+     }
+    },
+    {
+     "id": "q02",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8011,
+     "words": {
+      "1": 300,
+      "3": 799,
+      "5": 1348
+     }
+    },
+    {
+     "id": "q03",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7479,
+     "words": {
+      "1": 285,
+      "3": 856,
+      "5": 1405
+     }
+    },
+    {
+     "id": "q04",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7472,
+     "words": {
+      "1": 300,
+      "3": 703,
+      "5": 1381
+     }
+    },
+    {
+     "id": "q05",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7347,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1380
+     }
+    },
+    {
+     "id": "q06",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8014,
+     "words": {
+      "1": 378,
+      "3": 978,
+      "5": 1578
+     }
+    },
+    {
+     "id": "q07",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7373,
+     "words": {
+      "1": 378,
+      "3": 978,
+      "5": 1418
+     }
+    },
+    {
+     "id": "q08",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7659,
+     "words": {
+      "1": 250,
+      "3": 850,
+      "5": 1373
+     }
+    },
+    {
+     "id": "q09",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8168,
+     "words": {
+      "1": 300,
+      "3": 509,
+      "5": 875
+     }
+    },
+    {
+     "id": "q10",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7769,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1449
+     }
+    },
+    {
+     "id": "q11",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7982,
+     "words": {
+      "1": 300,
+      "3": 843,
+      "5": 1248
+     }
+    },
+    {
+     "id": "q12",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7547,
+     "words": {
+      "1": 268,
+      "3": 853,
+      "5": 1205
+     }
+    },
+    {
+     "id": "q13",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.6974,
+     "words": {
+      "1": 300,
+      "3": 830,
+      "5": 1380
+     }
+    },
+    {
+     "id": "q14",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.755,
+     "words": {
+      "1": 153,
+      "3": 703,
+      "5": 1303
+     }
+    },
+    {
+     "id": "q15",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8135,
+     "words": {
+      "1": 168,
+      "3": 768,
+      "5": 1368
+     }
+    },
+    {
+     "id": "q16",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7809,
+     "words": {
+      "1": 238,
+      "3": 838,
+      "5": 1438
+     }
+    },
+    {
+     "id": "q17",
+     "kind": "single",
+     "rank": 5,
+     "all_passages_at_5": false,
+     "top1_score": 0.7476,
+     "words": {
+      "1": 300,
+      "3": 838,
+      "5": 1438
+     }
+    },
+    {
+     "id": "q18",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8281,
+     "words": {
+      "1": 136,
+      "3": 717,
+      "5": 1259
+     }
+    },
+    {
+     "id": "q19",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.772,
+     "words": {
+      "1": 300,
+      "3": 768,
+      "5": 1318
+     }
+    },
+    {
+     "id": "q20",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7811,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1255
+     }
+    },
+    {
+     "id": "q21",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7813,
+     "words": {
+      "1": 300,
+      "3": 785,
+      "5": 1385
+     }
+    },
+    {
+     "id": "q22",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7891,
+     "words": {
+      "1": 300,
+      "3": 918,
+      "5": 1518
+     }
+    },
+    {
+     "id": "q23",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7897,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1442
+     }
+    },
+    {
+     "id": "q24",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7203,
+     "words": {
+      "1": 169,
+      "3": 710,
+      "5": 1310
+     }
+    },
+    {
+     "id": "q25",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": false,
+     "top1_score": 0.744,
+     "words": {
+      "1": 300,
+      "3": 498,
+      "5": 971
+     }
+    },
+    {
+     "id": "q26",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7507,
+     "words": {
+      "1": 249,
+      "3": 849,
+      "5": 1399
+     }
+    },
+    {
+     "id": "q27",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7604,
+     "words": {
+      "1": 300,
+      "3": 799,
+      "5": 1267
+     }
+    },
+    {
+     "id": "q28",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": false,
+     "top1_score": 0.7755,
+     "words": {
+      "1": 300,
+      "3": 918,
+      "5": 1470
+     }
+    },
+    {
+     "id": "q29",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.744,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1449
+     }
+    },
+    {
+     "id": "q30",
+     "kind": "multi",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.7639,
+     "words": {
+      "1": 378,
+      "3": 949,
+      "5": 1498
+     }
+    },
+    {
+     "id": "q31",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6894,
+     "words": {
+      "1": 300,
+      "3": 978,
+      "5": 1528
+     }
+    },
+    {
+     "id": "q32",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.7313,
+     "words": {
+      "1": 378,
+      "3": 877,
+      "5": 1254
+     }
+    },
+    {
+     "id": "q33",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6684,
+     "words": {
+      "1": 300,
+      "3": 978,
+      "5": 1395
+     }
+    },
+    {
+     "id": "q34",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.75,
+     "words": {
+      "1": 190,
+      "3": 596,
+      "5": 1111
+     }
+    },
+    {
+     "id": "q35",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6717,
+     "words": {
+      "1": 32,
+      "3": 500,
+      "5": 1100
+     }
+    },
+    {
+     "id": "q36",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6822,
+     "words": {
+      "1": 378,
+      "3": 750,
+      "5": 1029
+     }
+    }
+   ]
+  },
+  "structure+hybrid": {
+   "hit_rate": {
+    "1": 0.933,
+    "3": 0.967,
+    "5": 0.967
+   },
+   "multi_all_passages_at_5": 0.833,
+   "avg_words_added": {
+    "1": 274,
+    "3": 785,
+    "5": 1303
+   },
+   "per_question": [
+    {
+     "id": "q01",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 300,
+      "3": 799,
+      "5": 1348
+     }
+    },
+    {
+     "id": "q02",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 799,
+      "5": 1348
+     }
+    },
+    {
+     "id": "q03",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 285,
+      "3": 601,
+      "5": 1201
+     }
+    },
+    {
+     "id": "q04",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 674,
+      "5": 1130
+     }
+    },
+    {
+     "id": "q05",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 850,
+      "5": 1349
+     }
+    },
+    {
+     "id": "q06",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 378,
+      "3": 978,
+      "5": 1578
+     }
+    },
+    {
+     "id": "q07",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 378,
+      "3": 978,
+      "5": 1418
+     }
+    },
+    {
+     "id": "q08",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 250,
+      "3": 850,
+      "5": 1349
+     }
+    },
+    {
+     "id": "q09",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 509,
+      "5": 875
+     }
+    },
+    {
+     "id": "q10",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1481
+     }
+    },
+    {
+     "id": "q11",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0323,
+     "words": {
+      "1": 300,
+      "3": 843,
+      "5": 1377
+     }
+    },
+    {
+     "id": "q12",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 268,
+      "3": 853,
+      "5": 1258
+     }
+    },
+    {
+     "id": "q13",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 830,
+      "5": 1345
+     }
+    },
+    {
+     "id": "q14",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 153,
+      "3": 703,
+      "5": 1226
+     }
+    },
+    {
+     "id": "q15",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 168,
+      "3": 768,
+      "5": 1318
+     }
+    },
+    {
+     "id": "q16",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 300,
+      "3": 838,
+      "5": 1312
+     }
+    },
+    {
+     "id": "q17",
+     "kind": "single",
+     "rank": null,
+     "all_passages_at_5": false,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1323
+     }
+    },
+    {
+     "id": "q18",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 136,
+      "3": 736,
+      "5": 1251
+     }
+    },
+    {
+     "id": "q19",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 718,
+      "5": 1318
+     }
+    },
+    {
+     "id": "q20",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0323,
+     "words": {
+      "1": 300,
+      "3": 900,
+      "5": 1500
+     }
+    },
+    {
+     "id": "q21",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 785,
+      "5": 1254
+     }
+    },
+    {
+     "id": "q22",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 918,
+      "5": 1426
+     }
+    },
+    {
+     "id": "q23",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 300,
+      "3": 710,
+      "5": 1291
+     }
+    },
+    {
+     "id": "q24",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0164,
+     "words": {
+      "1": 169,
+      "3": 710,
+      "5": 1310
+     }
+    },
+    {
+     "id": "q25",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": false,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 300,
+      "3": 498,
+      "5": 798
+     }
+    },
+    {
+     "id": "q26",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 300,
+      "3": 834,
+      "5": 1512
+     }
+    },
+    {
+     "id": "q27",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 300,
+      "3": 799,
+      "5": 1349
+     }
+    },
+    {
+     "id": "q28",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 300,
+      "3": 852,
+      "5": 1546
+     }
+    },
+    {
+     "id": "q29",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 300,
+      "3": 785,
+      "5": 1366
+     }
+    },
+    {
+     "id": "q30",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 271,
+      "3": 949,
+      "5": 1498
+     }
+    },
+    {
+     "id": "q31",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0303,
+     "words": {
+      "1": 250,
+      "3": 850,
+      "5": 1349
+     }
+    },
+    {
+     "id": "q32",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 378,
+      "3": 755,
+      "5": 1355
+     }
+    },
+    {
+     "id": "q33",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 300,
+      "3": 663,
+      "5": 1131
+     }
+    },
+    {
+     "id": "q34",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 190,
+      "3": 760,
+      "5": 1152
+     }
+    },
+    {
+     "id": "q35",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0288,
+     "words": {
+      "1": 199,
+      "3": 689,
+      "5": 1021
+     }
+    },
+    {
+     "id": "q36",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.029,
+     "words": {
+      "1": 77,
+      "3": 677,
+      "5": 1262
+     }
+    }
+   ]
+  },
+  "fixed+dense": {
+   "hit_rate": {
+    "1": 0.867,
+    "3": 1.0,
+    "5": 1.0
+   },
+   "multi_all_passages_at_5": 0.833,
+   "avg_words_added": {
+    "1": 150,
+    "3": 446,
+    "5": 744
+   },
+   "per_question": [
+    {
+     "id": "q01",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8276,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q02",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7965,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q03",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7589,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q04",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7534,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q05",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7398,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q06",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q07",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7559,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q08",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7622,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q09",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7861,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q10",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.8034,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q11",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7913,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q12",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7527,
+     "words": {
+      "1": 150,
+      "3": 375,
+      "5": 675
+     }
+    },
+    {
+     "id": "q13",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7015,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q14",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7406,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q15",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7933,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q16",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.7741,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q17",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": false,
+     "top1_score": 0.7478,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q18",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7878,
+     "words": {
+      "1": 150,
+      "3": 386,
+      "5": 686
+     }
+    },
+    {
+     "id": "q19",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.7672,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q20",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7906,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q21",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7709,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q22",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.785,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q23",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7845,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q24",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.746,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q25",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": false,
+     "top1_score": 0.7296,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q26",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.742,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q27",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7546,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q28",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7696,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q29",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.7348,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q30",
+     "kind": "multi",
+     "rank": 3,
+     "all_passages_at_5": true,
+     "top1_score": 0.7538,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q31",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6927,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q32",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.7299,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q33",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6953,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 686
+     }
+    },
+    {
+     "id": "q34",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.7588,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q35",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.667,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q36",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.6769,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    }
+   ]
+  },
+  "fixed+hybrid": {
+   "hit_rate": {
+    "1": 0.9,
+    "3": 0.967,
+    "5": 0.967
+   },
+   "multi_all_passages_at_5": 0.833,
+   "avg_words_added": {
+    "1": 150,
+    "3": 448,
+    "5": 746
+   },
+   "per_question": [
+    {
+     "id": "q01",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q02",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q03",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q04",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q05",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q06",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q07",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q08",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q09",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q10",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q11",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q12",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 375,
+      "5": 675
+     }
+    },
+    {
+     "id": "q13",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0323,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q14",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q15",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q16",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q17",
+     "kind": "single",
+     "rank": null,
+     "all_passages_at_5": false,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q18",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 686
+     }
+    },
+    {
+     "id": "q19",
+     "kind": "single",
+     "rank": 2,
+     "all_passages_at_5": true,
+     "top1_score": 0.0323,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q20",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0315,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q21",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q22",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q23",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q24",
+     "kind": "single",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0164,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q25",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": false,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q26",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.032,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q27",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q28",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0318,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q29",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0293,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q30",
+     "kind": "multi",
+     "rank": 1,
+     "all_passages_at_5": true,
+     "top1_score": 0.0323,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q31",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0306,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q32",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q33",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0328,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q34",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0325,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q35",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0275,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    },
+    {
+     "id": "q36",
+     "kind": "unanswerable",
+     "rank": null,
+     "all_passages_at_5": null,
+     "top1_score": 0.0292,
+     "words": {
+      "1": 150,
+      "3": 450,
+      "5": 750
+     }
+    }
+   ]
+  }
+ }
+}

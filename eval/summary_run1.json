@@ -1,0 +1,34 @@
+{
+ "questions": 36,
+ "outcomes": {
+  "correct": 23,
+  "withheld by citation gate": 2,
+  "correct but unsupported": 4,
+  "wrong": 1,
+  "correct refusal": 6
+ },
+ "likely_causes": {
+  "unsupported claim": 6,
+  "wrong answer from the right passage": 1
+ },
+ "code_checks": {
+  "refusal_ok": 34,
+  "answers_with_invalid_citations_before_gate": 0,
+  "withheld_by_gate": 2,
+  "cites_expected_source": 27,
+  "errors": 0
+ },
+ "agreement_with_human_labels": {
+  "graded": 0
+ },
+ "cost_per_question": {
+  "input_tokens_mean": 6826,
+  "output_tokens_mean": 186,
+  "seconds_mean": 10.0,
+  "seconds_median": 5.1,
+  "searches_mean": 1.58
+ },
+ "model": "gemini-3.5-flash-lite",
+ "judge_model": "gemini-3.5-flash-lite",
+ "design": "fixed+dense"
+}

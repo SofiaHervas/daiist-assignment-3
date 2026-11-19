@@ -1,0 +1,254 @@
+{
+ "q01": {
+  "key": "fdb97be5c98bcafd",
+  "reasoning": "The answer provides the correct minimum installation height (60 cm) as well as the height for accessible parking spaces (80 to 120 cm), fully matching the reference answer and passages without contradictions. Every factual claim is directly supported by the retrieved passages. Therefore, both correct and supported are true, with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q02": {
+  "key": "d21044e573e8cee4",
+  "reasoning": "The answer provides all key facts from the reference answer including the height range (80 to 120 cm), chromatic contrast, and minimum distance to corners (35 cm). There are no contradictions and all claims are fully supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q03": {
+  "key": "b1e75167e69aae20",
+  "reasoning": "The answer correctly states that each connection point must be protected by a residual current device with a maximum sensitivity of 30 mA and of class A, matching the reference answer. Every fact mentioned, including the option to be part of the fixed installation or inside the SAVE, is explicitly supported by the retrieved passages. All criteria for correctness and support are fully met.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q04": {
+  "key": "f0f74c9cd4cbcee1",
+  "reasoning": "The answer provides the correct key fact (5% maximum voltage drop) matching the reference answer and the passages. It does not contain any contradictions or missing key details. Every factual claim is directly supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q05": {
+  "key": "b818bc69e3e272f3",
+  "reasoning": "The answer provides the exact key facts from the reference answer, stating a minimum horizontal illuminance level of 50 lux at floor level for indoor charging stations. Every claim in the answer is directly supported by passage 1 (ITC-BT-52), with no missing details or unsupported statements.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q06": {
+  "key": "d8c3533f2c397170",
+  "reasoning": "The answer provides the key facts from the reference answer, mentioning both the exclusive C13 circuit and the 4a installation scheme, which are completely correct and properly supported by passage 1. It also includes true extra details from the passages about the power supply and steps. Therefore, both criteria for correctness and support are met without any unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q07": {
+  "key": "2f81d3c497f90914",
+  "reasoning": "The answer correctly gives the key facts of the reference answer (9.200 W and the condition regarding network imbalances) and is fully supported by the retrieved passages (specifically passage 1). There are no contradictions or unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q08": {
+  "key": "6d41bc8e0f0872a3",
+  "reasoning": "The answer provides all key facts from the reference answer (20% for unassociated parking spaces, and at least one module if all are associated), which satisfies Criterion 1. Furthermore, every claim made in the answer is directly supported by the retrieved passages, fulfilling Criterion 2. Therefore, the answer is both correct and fully supported with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q09": {
+  "key": "6cd75a1da3c0eb08",
+  "reasoning": "The answer correctly identifies the simultaneity factor of 0,3 for electric vehicle loads with the rest of the installation when the SPL is installed, matching the reference answer and passages. Every factual claim made in the answer is explicitly supported by the retrieved passages. Therefore, the answer is both correct and fully supported, with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q10": {
+  "key": "e9481af75d8062da",
+  "reasoning": "The answer provides the exact key facts required regarding alternating current charging points between 3.7 kW and 22 kW, matching the reference answer. Every factual claim is directly supported by the retrieved passages (specifically passage 4 and 1). There are no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q11": {
+  "key": "161e619999c9aa88",
+  "reasoning": "The assistant correctly identifies that the body of a charging station located outdoors must have a minimum protection degree of IK10 against external mechanical impacts, matching the key facts of the reference answer. All stated facts, including exclusions and additional measures, are fully supported by passage 4. Therefore, the answer is both correct and supported with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q16": {
+  "key": "e5e7789bba8ad158",
+  "reasoning": "The answer provides all the key facts from the reference answer and includes additional relevant details properly supported by the retrieved passages. Every factual claim made is directly traceable to the cited text without contradictions or unsupported assertions.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q17": {
+  "key": "b8de1e706ea6089a",
+  "reasoning": "The answer directly addresses the question and accurately conveys all key facts from the reference answer, stating that a public charging point cannot refuse service to a driver without a prior contract and must offer ad-hoc charging without technical or contractual obstacles. Every factual claim is directly supported by the provided text from Real Decreto 184/2022. There are no unsupported claims or contradictions.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q24": {
+  "key": "aa56e144dbcf70da",
+  "reasoning": "The answer correctly states that all publicly accessible charging points must be digitally connected by 14 October 2024, matching the reference answer and key facts. Every claim made in the answer is fully supported by the retrieved passages (specifically passage 2, pp. 25-26). There are no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q12": {
+  "key": "3c91a4201d895143",
+  "reasoning": "The answer provides the correct key fact (maximum contact voltage of 24 V) matching the reference answer and passages without contradictions. All factual claims are fully supported by the retrieved passages, specifically mentioning the conditions for avoiding voltages higher than 24 V on accessible metal parts. Therefore, the answer is both correct and supported.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q13": {
+  "key": "9eab7b81d6e62557",
+  "reasoning": "The assistant's answer correctly addresses the question by stating that recharging batteries with gas release is not permitted in enclosed parking locations, matching all key facts of the reference answer. All factual claims made are directly supported by the provided retrieved passages from the ITC-BT-52 regulation, with proper citations included. Therefore, the answer is both correct and fully supported.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q14": {
+  "key": "08352a93f4606f68",
+  "reasoning": "The answer provides all the key facts from the reference answer, specifying the required schemes (1a, 1b, 1c, 4b), the condition of a commercial transaction dependent on energy consumption, and the context of horizontal property. Every factual claim made is directly supported by passage 2. Therefore, both criteria for being correct and supported are satisfied.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q15": {
+  "key": "8f80779a36512bda",
+  "reasoning": "The answer correctly gives the minimum requirement of one charging station per 40 parking spaces or fraction for new parking lots not located in or attached to a building, matching the reference answer. Every factual claim is fully supported by the provided passages. Therefore, the answer is both correct and supported.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q18": {
+  "key": "2bd9a83d9c9772da",
+  "reasoning": "The answer correctly identifies that charging stations with a power exceeding 3,000 kW are subject to the authorization procedure under Article 53 of Law 24/2013 and Real Decreto 1955/2000 when state competence applies, perfectly matching the reference answer. All key facts (numbers, conditions, procedures) are present without any contradictions. Furthermore, every factual claim is directly supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q19": {
+  "key": "7f7160fc36e48ec5",
+  "reasoning": "The answer accurately states that cable conduit systems must be provided for 100% of parking spaces in new private residential buildings, matching the reference answer and the text in the retrieved passages. All facts are directly supported by the passage from Real Decreto 450/2022. Therefore, both criteria are satisfied with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q20": {
+  "key": "0dc8c59657f2bf02",
+  "reasoning": "The assistant's answer correctly lists all the exclusions specified in section HE 6 of the CTE as described in the retrieved passages, matching the reference answer completely in facts, numbers, and conditions. Every claim made in the answer is directly supported by the provided text from Real Decreto 450/2022. There are no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q21": {
+  "key": "0c0c3c423df0a9fc",
+  "reasoning": "The answer provides all the key facts from the reference answer, including electronic payment instruments of widespread use in the EU, card readers, contactless devices, and internet payment systems like QR codes for chargers under 50 kW. It does not contain any contradictions or missing crucial details, and every single factual claim is directly supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q22": {
+  "key": "db7b65a45aa6fccd",
+  "reasoning": "The assistant's answer correctly provides the key facts from the reference answer, stating that prices must be based on kWh and that an occupancy fee per minute can be charged for stations of 50 kW or more. Every factual claim made is directly supported by the retrieved passages. Therefore, both criteria for correctness and support are met.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q23": {
+  "key": "6a7b69cf2d70a4aa",
+  "reasoning": "The answer provides the key facts regarding the required charging power of at least 1,3 kW per light battery electric vehicle through public stations, starting from the end of each year from 2024, matching the reference answer and passages. Therefore, it is correct. Every factual claim made is directly supported by the retrieved passages, making it fully supported with no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q25": {
+  "key": "160cddb9831698bc",
+  "reasoning": "The answer correctly identifies the simultaneity factor of 1.0 for a collective scheme without an SPL and the minimum copper conductor section of 2.5 mm2, matching all key facts of the reference answer. Every factual claim is directly supported by the provided text from ITC-BT-52. There are no unsupported claims or contradictions.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q26": {
+  "key": "350dcdb713102e8e",
+  "reasoning": "The answer correctly provides all key facts required by the reference answer: the type 2 connector (UNE-EN 62196-2), the individual differential protection of maximum 30 mA, class A, and the specific requirement for public parking lots (disconnection warning system or automatic reclosing device). All of these claims are fully supported by the retrieved passages, and there are no unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q27": {
+  "key": "03706b39749c997f",
+  "reasoning": "The answer correctly states that 2 charging stations are required for the 80 parking spaces, and 1 for the 5 accessible spaces (which computes within the total), giving a minimum total of 2 stations. It also correctly specifies that the connectors for accessible spaces must be placed at a height between 80 and 120 cm. All facts are explicitly supported by the retrieved passages, and no contradictory or unsupported claims are made.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q28": {
+  "key": "5a08d3e0684779d1",
+  "reasoning": "The assistant provides a complete and accurate answer that covers both the Spanish regulation (Real Decreto 184/2022) and the European regulation (AFIR) regarding pricing requirements, including non-discrimination, transparency, comparison, power thresholds (50 kW), and displaying component prices. Every single fact presented is directly supported by the retrieved passages, and no contradictory or unsupported claims are made.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q29": {
+  "key": "822454f7bb966696",
+  "reasoning": "The assistant provides the exact connector requirement from ITC-BT-52 (combo 2, EN 62196-3, mode 4) and correctly identifies the payment methods required by AFIR for a 150 kW charger (card readers or contactless payment devices, excluding QR codes since power exceeds 50 kW). All statements are completely correct, perfectly aligned with the reference answer, and fully supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q30": {
+  "key": "216cbff824997b45",
+  "reasoning": "The assistant correctly states that a UNE 20315 socket can be used in a single-family home for mode 1 or 2 charging, specifies the 10 A rating, and details the circuit breaker options (10 A or 16 A under specific manufacturer conditions). Every factual claim is fully supported by the retrieved passages, making it both correct and supported.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q31": {
+  "key": "049289ac6a136cb5",
+  "reasoning": "The question is unanswerable from the technical regulations provided because property owners' association permissions are governed by the Ley de Propiedad Horizontal rather than the technical standards. The assistant correctly identifies that the documents do not cover this topic and gives no substantive answer, fulfilling the criteria for unanswerable questions. Every factual claim made is supported by the context of what the documents contain.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q32": {
+  "key": "7b9b6f774d7c9b71",
+  "reasoning": "The question is unanswerable because installation costs are not covered by the regulations. The answer correctly identifies that the documents do not cover the question and provides no substantive answer or general knowledge. Since it is a refusal, it is fully supported.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q33": {
+  "key": "d45df948b1f94f03",
+  "reasoning": "The assistant correctly identifies that the documents do not specify the amounts for the MOVES III program, satisfying the correctness criterion for unanswerable questions. Every factual claim made is fully supported by the retrieved passages. Therefore, both criteria are met and no unsupported claims are present.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q34": {
+  "key": "34f1f20117391f7f",
+  "reasoning": "The question is unanswerable based on the provided corpus, as no maximum deadline is specified. The answer correctly identifies that the documents do not cover this timeframe, fulfilling the criteria for an unanswerable question. Furthermore, the claims made are fully supported by the retrieved passages.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q35": {
+  "key": "cf4fecf3f1859945",
+  "reasoning": "The assistant correctly identified that the question is unanswerable based on the provided documents and clearly stated that the corpus does not cover traffic sanctions for parking combustion vehicles in charging spaces, meeting the criteria for a correct and supported refusal.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ },
+ "q36": {
+  "key": "a8b75e57027539af",
+  "reasoning": "The question is unanswerable from the provided passages because IRPF deductions are not covered. The answer correctly states that the documents do not cover the question and correctly identifies the topics that are covered instead, without making any unsupported claims.",
+  "correct": true,
+  "supported": true,
+  "unsupported_claims": []
+ }
+}

@@ -1,0 +1,44 @@
+{
+ "questions": 36,
+ "outcomes": {
+  "correct": 30,
+  "correct refusal": 6
+ },
+ "likely_causes": {},
+ "code_checks": {
+  "refusal_ok": 36,
+  "answers_with_invalid_citations_before_gate": 0,
+  "withheld_by_gate": 0,
+  "cites_expected_source": 30,
+  "errors": 0
+ },
+ "agreement_with_human_labels": {
+  "graded": 36,
+  "correct_agreement": 0.972,
+  "supported_agreement": 1.0,
+  "disagreements": [
+   {
+    "id": "q30",
+    "human": {
+     "correct": "0",
+     "supported": "1"
+    },
+    "judge": {
+     "correct": 1,
+     "supported": 1
+    },
+    "judge_reasoning": "The assistant correctly states that a UNE 20315 socket can be used in a single-family home for mode 1 or 2 charging, specifies the 10 A rating, and details the circuit breaker options (10 A or 16 A under specific manufacturer conditions). Every factual claim is fully supported by the retrieved passages, making it both correct and supported."
+   }
+  ]
+ },
+ "cost_per_question": {
+  "input_tokens_mean": 6449,
+  "output_tokens_mean": 166,
+  "seconds_mean": 17.3,
+  "seconds_median": 11.6,
+  "searches_mean": 1.47
+ },
+ "model": "gemini-3.5-flash-lite",
+ "judge_model": "gemini-3.5-flash-lite",
+ "design": "fixed+dense"
+}
