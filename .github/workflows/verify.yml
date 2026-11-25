@@ -29,6 +29,7 @@ jobs:
 
       - name: Install dependencies
         run: uv sync
-
+      - name: Write .env from the secret
+        run: printf 'GEMINI_API_KEY=%s\n' "$GEMINI_API_KEY" > .env
       - name: Run the submission self-check
         run: uv run python check.py
